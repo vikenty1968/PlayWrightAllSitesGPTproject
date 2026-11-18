@@ -63,7 +63,7 @@ test("Play around alerts",async({page})=>{
 
  //confirm
   const confirmBtn =page.getByRole("button",{name:"Confirm"})   
-   // subscribe ob event
+   // subscribe to event
   page.once("dialog",async dialog=>{
     console.log(dialog.message())
      expect(dialog.type()).toBe("confirm")
