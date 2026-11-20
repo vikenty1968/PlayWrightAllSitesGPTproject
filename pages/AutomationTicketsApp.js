@@ -8,10 +8,20 @@ class AutomationTicketsApp {
     this.decreaseChildBtn=page.locator("#hrefDecChd")
     this.countAdult = page.locator("#spanAudlt");
     this.countChild = page.locator("#spanChild");
+    this.menuDropDown=page.locator("#divpaxOptions")
     this.doneBtn = page.getByRole("button", { name: "Done" });
+    this.roundTripCalendar=page.locator(".picker-second")
+    this.roundTripBtn= page.locator("#ctl00_mainContent_rbtnl_Trip_1")
+    this.oneWayBtn= page.locator("#ctl00_mainContent_rbtnl_Trip_0")
+    this.currency = page.locator('#ctl00_mainContent_DropDownListCurrency');
+    this.addBtn=page.getByRole("button",{name:"+Add More"})
+    this.removeRtn=page.getByRole("button",{name:"Remove"})
   }
   async increaseAdultsNumber() {
     await this.increaseAdNumber.click();
+  }
+  async decreaseAdNumber(){
+      await decreaseAdNumber.click()
   }
   async increaseChildNumber() {
     await this.increaseChildBtn.click();
@@ -45,5 +55,6 @@ class AutomationTicketsApp {
       }
     }
   }
+
 }
 export { AutomationTicketsApp };
